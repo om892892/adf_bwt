@@ -1,0 +1,9 @@
+{
+	"name": "bwt-adf-session",
+	"location": "eastus",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "c1550c98-4cad-4337-92d0-b4576cdcc9f4",
+		"tenantId": "e3deac48-8e5c-4121-8e55-9dd11eb5710d"
+	}
+}
