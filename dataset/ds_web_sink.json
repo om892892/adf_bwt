@@ -1,0 +1,27 @@
+{
+	"name": "ds_web_sink",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azure_stg",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@concat('schedule_',item().season,'.json')",
+					"type": "Expression"
+				},
+				"folderPath": "output",
+				"container": "bwtsession"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "",
+			"firstRowAsHeader": false,
+			"quoteChar": ""
+		},
+		"schema": []
+	}
+}
