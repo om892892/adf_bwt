@@ -38,7 +38,7 @@
 				"typeProperties": {
 					"variableName": "first_response ",
 					"value": {
-						"value": "@string(activity('act_web').output)",
+						"value": "@string(activity('act_web').output.MRData.CircuitTable.Circuits)",
 						"type": "Expression"
 					}
 				}
