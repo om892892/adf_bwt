@@ -212,7 +212,13 @@
 									"referenceName": "pl_sessions_round_chaild",
 									"type": "PipelineReference"
 								},
-								"waitOnCompletion": true
+								"waitOnCompletion": true,
+								"parameters": {
+									"take_season_from_parents": {
+										"value": "@variables('take_years_from_parents')",
+										"type": "Expression"
+									}
+								}
 							}
 						}
 					]
