@@ -20,8 +20,8 @@
 					"value": "@dataset().file_name",
 					"type": "Expression"
 				},
-				"folderPath": "output_drivers",
-				"container": "bwtsession"
+				"folderPath": "races",
+				"container": "formula-output"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "",

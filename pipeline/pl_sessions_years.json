@@ -189,7 +189,10 @@
 							"userProperties": [],
 							"typeProperties": {
 								"variableName": "take_years_from_parents",
-								"value": ""
+								"value": {
+									"value": "@item().Seasons",
+									"type": "Expression"
+								}
 							}
 						}
 					]
