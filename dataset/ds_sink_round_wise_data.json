@@ -1,0 +1,23 @@
+{
+	"name": "ds_sink_round_wise_data",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azure_stg",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "results",
+				"container": "formula-output"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": false,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
