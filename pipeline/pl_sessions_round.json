@@ -194,7 +194,7 @@
 							"typeProperties": {
 								"variableName": "year",
 								"value": {
-									"value": "@{activity('Web1').output.MRData.RaceTable.Races.round}",
+									"value": "@{activity('Web1').output.MRData.RaceTable.Races[0].round}\n",
 									"type": "Expression"
 								}
 							}
