@@ -190,7 +190,7 @@
 							"typeProperties": {
 								"variableName": "year",
 								"value": {
-									"value": "@{activity('Web1').output.MRData.RaceTable.Races}",
+									"value": "@{activity('Web1').output.MRData.RaceTable.Races.round}",
 									"type": "Expression"
 								}
 							}
@@ -256,9 +256,9 @@
 												"type": "String"
 											},
 											"sink": {
+												"name": "Column2",
 												"type": "String",
-												"physicalType": "String",
-												"ordinal": 1
+												"physicalType": "String"
 											}
 										}
 									],
@@ -278,7 +278,10 @@
 							"outputs": [
 								{
 									"referenceName": "ds_session_round",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"folder_name": "round_output"
+									}
 								}
 							]
 						}
