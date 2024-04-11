@@ -178,14 +178,7 @@
 						{
 							"name": "act_Set_variable1_copy1",
 							"type": "SetVariable",
-							"dependsOn": [
-								{
-									"activity": "Web1",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								}
-							],
+							"dependsOn": [],
 							"policy": {
 								"secureOutput": false,
 								"secureInput": false
