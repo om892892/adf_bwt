@@ -16,6 +16,10 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@concat('schedule_',item().round,'.json')",
+					"type": "Expression"
+				},
 				"folderPath": {
 					"value": "@dataset().folder_name",
 					"type": "Expression"
