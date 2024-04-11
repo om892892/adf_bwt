@@ -170,7 +170,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"file_name_year": {
-											"value": "@pipeline().parameters.take_yera_from_parents",
+											"value": "@pipeline().parameters.take_season_from_parents",
 											"type": "Expression"
 										},
 										"file_name_round": {
