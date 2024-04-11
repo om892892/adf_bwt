@@ -5,6 +5,14 @@
 			"referenceName": "ls_azure_stg",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"file_name_year": {
+				"type": "String"
+			},
+			"file_name_round": {
+				"type": "String"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
