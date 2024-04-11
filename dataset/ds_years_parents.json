@@ -10,13 +10,17 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@concat('schedule_',item().season,'.json')",
+					"type": "Expression"
+				},
 				"folderPath": "races",
 				"container": "formula-output"
 			},
 			"columnDelimiter": ",",
 			"escapeChar": "\\",
-			"firstRowAsHeader": true,
-			"quoteChar": "\""
+			"firstRowAsHeader": false,
+			"quoteChar": ""
 		},
 		"schema": []
 	}
