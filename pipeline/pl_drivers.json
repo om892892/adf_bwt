@@ -151,7 +151,10 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "drivers",
-					"value": ""
+					"value": {
+						"value": "@activity('Web1').output.MRData.total",
+						"type": "Expression"
+					}
 				}
 			}
 		],
