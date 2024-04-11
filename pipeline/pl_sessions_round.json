@@ -190,7 +190,7 @@
 							"typeProperties": {
 								"variableName": "year",
 								"value": {
-									"value": "@{activity('Web1').output.MRData.RaceTable.Races.round}",
+									"value": "@{activity('Web1').output.MRData.RaceTable.Races['round']}",
 									"type": "Expression"
 								}
 							}
@@ -201,6 +201,12 @@
 							"dependsOn": [
 								{
 									"activity": "act_Set_variable1_copy1",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								},
+								{
+									"activity": "act_Set_variable1",
 									"dependencyConditions": [
 										"Succeeded"
 									]
