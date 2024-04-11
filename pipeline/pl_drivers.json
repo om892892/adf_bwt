@@ -128,7 +128,7 @@
 						"referenceName": "ds_web_sink",
 						"type": "DatasetReference",
 						"parameters": {
-							"file_name": "Drives"
+							"file_name": "Drives.json"
 						}
 					}
 				]
