@@ -11,7 +11,7 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "@concat('schedule_',item().season,'.json')",
+					"value": "@concat('schedule_',item().Drivers,'.json')",
 					"type": "Expression"
 				},
 				"folderPath": "output_drivers",
