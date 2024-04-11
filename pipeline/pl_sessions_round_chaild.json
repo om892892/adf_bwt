@@ -175,11 +175,22 @@
 				}
 			}
 		],
+		"parameters": {
+			"take_yera_from_parents": {
+				"type": "string"
+			}
+		},
 		"variables": {
 			"year": {
 				"type": "Array"
 			},
 			"drivers": {
+				"type": "String"
+			},
+			"yearwise_url": {
+				"type": "String"
+			},
+			"take_years_from_parents": {
 				"type": "String"
 			}
 		},
