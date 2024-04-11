@@ -169,7 +169,7 @@
 							]
 						},
 						{
-							"name": "set_variables_for",
+							"name": "set_variables_for_chaild",
 							"type": "SetVariable",
 							"dependsOn": [
 								{
