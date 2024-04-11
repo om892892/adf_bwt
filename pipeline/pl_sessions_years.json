@@ -1,5 +1,5 @@
 {
-	"name": "pl_sessions",
+	"name": "pl_sessions_years",
 	"properties": {
 		"activities": [
 			{
@@ -180,6 +180,9 @@
 				"type": "String"
 			},
 			"drivers": {
+				"type": "String"
+			},
+			"yearwise_url": {
 				"type": "String"
 			}
 		},
