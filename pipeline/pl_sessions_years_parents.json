@@ -1,5 +1,5 @@
 {
-	"name": "pl_sessions_years",
+	"name": "pl_sessions_years_parents",
 	"properties": {
 		"activities": [
 			{
@@ -191,6 +191,25 @@
 									"type": "Expression"
 								}
 							}
+						},
+						{
+							"name": "Execute Pipeline1",
+							"type": "ExecutePipeline",
+							"dependsOn": [
+								{
+									"activity": "set_variables_for_chaild",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"waitOnCompletion": true
+							}
 						}
 					]
 				}
@@ -207,6 +226,9 @@
 				"type": "String"
 			},
 			"take_years_from_parents": {
+				"type": "String"
+			},
+			"round_wise_data": {
 				"type": "String"
 			}
 		},
