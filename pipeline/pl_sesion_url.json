@@ -15,10 +15,37 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
+					"method": "GET",
 					"url": "http://ergast.com/api/f1/seasons.json"
+				}
+			},
+			{
+				"name": "set_variable_for_url",
+				"type": "SetVariable",
+				"dependsOn": [
+					{
+						"activity": "web_url",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": "yearwise_url",
+					"value": ""
 				}
 			}
 		],
+		"variables": {
+			"yearwise_url": {
+				"type": "String"
+			}
+		},
 		"folder": {
 			"name": "ignition"
 		},
