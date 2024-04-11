@@ -175,7 +175,14 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"method": "GET",
+					"url": {
+						"value": "@concat('http://ergast.com/api/f1/drivers.json?limit=',variables('drivers'))",
+						"type": "Expression"
+					}
+				}
 			}
 		],
 		"variables": {
