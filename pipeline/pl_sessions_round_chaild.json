@@ -55,13 +55,13 @@
 							"typeProperties": {
 								"method": "GET",
 								"url": {
-									"value": "@concat('http://ergast.com/api/f1/',pipeline().parameters.take_yera_from_parents,'/',item().round,'.json?limit=100')",
+									"value": "@concat('http://ergast.com/api/f1/',pipeline().parameters.take_yera_from_parents,'/',item().round,'/','results.json?limit=100')",
 									"type": "Expression"
 								}
 							}
 						},
 						{
-							"name": "act_Set_variable1",
+							"name": "set_variable_round_wise",
 							"type": "SetVariable",
 							"dependsOn": [
 								{
@@ -89,7 +89,7 @@
 							"type": "Copy",
 							"dependsOn": [
 								{
-									"activity": "act_Set_variable1",
+									"activity": "set_variable_round_wise",
 									"dependencyConditions": [
 										"Succeeded"
 									]
