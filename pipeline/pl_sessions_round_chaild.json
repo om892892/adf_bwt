@@ -55,7 +55,7 @@
 							"typeProperties": {
 								"method": "GET",
 								"url": {
-									"value": "@concat('http://ergast.com/api/f1/',item().season, '.json?limit=100')",
+									"value": "@concat('http://ergast.com/api/f1/',pipeline().parameters.take_yera_from_parents,'/',item().round,'.json?limit=100')",
 									"type": "Expression"
 								}
 							}
