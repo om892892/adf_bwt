@@ -138,6 +138,19 @@
 								"enableStaging": false,
 								"translator": {
 									"type": "TabularTranslator",
+									"mappings": [
+										{
+											"source": {
+												"name": "col_1",
+												"type": "String"
+											},
+											"sink": {
+												"type": "String",
+												"physicalType": "String",
+												"ordinal": 1
+											}
+										}
+									],
 									"typeConversion": true,
 									"typeConversionSettings": {
 										"allowDataTruncation": true,
@@ -179,7 +192,7 @@
 		},
 		"variables": {
 			"year": {
-				"type": "Array"
+				"type": "String"
 			},
 			"drivers": {
 				"type": "String"
