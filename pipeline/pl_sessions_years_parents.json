@@ -36,7 +36,7 @@
 						"value": "@activity('act_web').output.MRData.SeasonTable.Seasons",
 						"type": "Expression"
 					},
-					"isSequential": true,
+					"isSequential": false,
 					"activities": [
 						{
 							"name": "Web1",
