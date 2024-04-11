@@ -77,7 +77,7 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
-								"variableName": "year",
+								"variableName": "round_wise_data",
 								"value": {
 									"value": "@{activity('Web1').output.MRData.RaceTable.Races}",
 									"type": "Expression"
@@ -194,6 +194,9 @@
 				"type": "String"
 			},
 			"take_years_from_parents": {
+				"type": "String"
+			},
+			"round_wise_data": {
 				"type": "String"
 			}
 		},
