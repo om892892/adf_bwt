@@ -170,6 +170,27 @@
 									}
 								}
 							]
+						},
+						{
+							"name": "Set variable1",
+							"type": "SetVariable",
+							"dependsOn": [
+								{
+									"activity": "Web1",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
+							"policy": {
+								"secureOutput": false,
+								"secureInput": false
+							},
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "take_years_from_parents",
+								"value": ""
+							}
 						}
 					]
 				}
@@ -183,6 +204,9 @@
 				"type": "String"
 			},
 			"yearwise_url": {
+				"type": "String"
+			},
+			"take_years_from_parents": {
 				"type": "String"
 			}
 		},
