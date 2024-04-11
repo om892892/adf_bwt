@@ -187,7 +187,7 @@
 							"typeProperties": {
 								"variableName": "take_years_from_parents",
 								"value": {
-									"value": "@item().seasons",
+									"value": "@item().season",
 									"type": "Expression"
 								}
 							}
