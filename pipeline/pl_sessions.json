@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"method": "GET",
-					"url": "http://ergast.com/api/f1/seasons.json"
+					"url": "http://ergast.com/api/f1/seasons.json?limit=100"
 				}
 			},
 			{
@@ -52,7 +52,7 @@
 							"typeProperties": {
 								"method": "GET",
 								"url": {
-									"value": "@concat('http://ergast.com/api/f1/',item().season, '.json')",
+									"value": "@concat('http://ergast.com/api/f1/',item().season, '.json?limit=100')",
 									"type": "Expression"
 								}
 							}
@@ -170,6 +170,25 @@
 						}
 					]
 				}
+			},
+			{
+				"name": "set_var_copy",
+				"type": "SetVariable",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
+				"dependsOn": [
+					{
+						"activity": "act_web",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": []
 			}
 		],
 		"variables": {
