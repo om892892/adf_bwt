@@ -17,7 +17,7 @@
 				"typeProperties": {
 					"method": "GET",
 					"url": {
-						"value": "@concat('http://ergast.com/api/f1/',pipeline().parameters.take_yera_from_parents, '.json')",
+						"value": "@concat('http://ergast.com/api/f1/',pipeline().parameters.take_season_from_parents, '.json')",
 						"type": "Expression"
 					}
 				}
@@ -55,7 +55,7 @@
 							"typeProperties": {
 								"method": "GET",
 								"url": {
-									"value": "@concat('http://ergast.com/api/f1/',pipeline().parameters.take_yera_from_parents,'/',item().round,'/','results.json?limit=100')",
+									"value": "@concat('http://ergast.com/api/f1/',pipeline().parameters.take_season_from_parents,'/',item().round,'/','results.json?limit=100')",
 									"type": "Expression"
 								}
 							}
@@ -186,7 +186,7 @@
 			}
 		],
 		"parameters": {
-			"take_yera_from_parents": {
+			"take_season_from_parents": {
 				"type": "string"
 			}
 		},
