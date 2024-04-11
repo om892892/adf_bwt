@@ -111,7 +111,7 @@
 										{
 											"name": "col_1",
 											"value": {
-												"value": "@variables('year')",
+												"value": "@variables('round_wise_data')",
 												"type": "Expression"
 											}
 										}
