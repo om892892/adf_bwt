@@ -11,10 +11,13 @@
 			"location": {
 				"type": "AzureBlobStorageLocation",
 				"fileName": {
-					"value": "@concat('schedule_',item().season,'.json')",
+					"value": "@concat('season_',item().season,'.json')",
 					"type": "Expression"
 				},
-				"folderPath": "races",
+				"folderPath": {
+					"value": "@concat('Races','/',string(utcnow('yyyyMMdd')))",
+					"type": "Expression"
+				},
 				"container": "formula-output"
 			},
 			"columnDelimiter": ",",
