@@ -174,7 +174,14 @@
 						{
 							"name": "act_Set_variable1_copy1",
 							"type": "SetVariable",
-							"dependsOn": [],
+							"dependsOn": [
+								{
+									"activity": "act_Set_variable1",
+									"dependencyConditions": [
+										"Succeeded"
+									]
+								}
+							],
 							"policy": {
 								"secureOutput": false,
 								"secureInput": false
@@ -194,12 +201,6 @@
 							"dependsOn": [
 								{
 									"activity": "act_Set_variable1_copy1",
-									"dependencyConditions": [
-										"Succeeded"
-									]
-								},
-								{
-									"activity": "act_Set_variable1",
 									"dependencyConditions": [
 										"Succeeded"
 									]
