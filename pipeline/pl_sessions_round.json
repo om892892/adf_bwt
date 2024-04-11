@@ -297,7 +297,7 @@
 		],
 		"variables": {
 			"year": {
-				"type": "String"
+				"type": "Array"
 			},
 			"drivers": {
 				"type": "String"
