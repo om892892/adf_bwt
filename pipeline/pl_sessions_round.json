@@ -176,7 +176,7 @@
 							"type": "SetVariable",
 							"dependsOn": [
 								{
-									"activity": "act_Set_variable1",
+									"activity": "Web1",
 									"dependencyConditions": [
 										"Succeeded"
 									]
