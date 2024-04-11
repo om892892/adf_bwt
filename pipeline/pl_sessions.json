@@ -173,28 +173,6 @@
 						}
 					]
 				}
-			},
-			{
-				"name": "set_var_copy",
-				"type": "SetVariable",
-				"state": "Inactive",
-				"onInactiveMarkAs": "Succeeded",
-				"dependsOn": [
-					{
-						"activity": "act_web",
-						"dependencyConditions": [
-							"Succeeded"
-						]
-					}
-				],
-				"policy": {
-					"secureOutput": false,
-					"secureInput": false
-				},
-				"userProperties": [],
-				"typeProperties": {
-					"variableName": ""
-				}
 			}
 		],
 		"variables": {

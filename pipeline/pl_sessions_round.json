@@ -60,8 +60,6 @@
 						{
 							"name": "act_Set_variable1",
 							"type": "SetVariable",
-							"state": "Inactive",
-							"onInactiveMarkAs": "Succeeded",
 							"dependsOn": [
 								{
 									"activity": "Web1",
@@ -86,8 +84,6 @@
 						{
 							"name": "act_copy_schedule_session",
 							"type": "Copy",
-							"state": "Inactive",
-							"onInactiveMarkAs": "Succeeded",
 							"dependsOn": [
 								{
 									"activity": "act_Set_variable1",
@@ -174,23 +170,6 @@
 									}
 								}
 							]
-						},
-						{
-							"name": "act_Set_variable1_copy1",
-							"type": "SetVariable",
-							"dependsOn": [],
-							"policy": {
-								"secureOutput": false,
-								"secureInput": false
-							},
-							"userProperties": [],
-							"typeProperties": {
-								"variableName": "year",
-								"value": {
-									"value": "@{activity('Web1').output.MRData.RaceTable.Races.round}\n",
-									"type": "Expression"
-								}
-							}
 						}
 					]
 				}
