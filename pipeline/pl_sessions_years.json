@@ -121,17 +121,6 @@
 										"type": "DelimitedTextReadSettings"
 									}
 								},
-								"sink": {
-									"type": "DelimitedTextSink",
-									"storeSettings": {
-										"type": "AzureBlobStorageWriteSettings"
-									},
-									"formatSettings": {
-										"type": "DelimitedTextWriteSettings",
-										"quoteAllText": true,
-										"fileExtension": ".txt"
-									}
-								},
 								"enableStaging": false,
 								"translator": {
 									"type": "TabularTranslator",
@@ -143,31 +132,16 @@
 											},
 											"sink": {
 												"type": "String",
-												"physicalType": "String",
 												"ordinal": 1
 											}
 										}
-									],
-									"typeConversion": true,
-									"typeConversionSettings": {
-										"allowDataTruncation": true,
-										"treatBooleanAsNumber": false
-									}
+									]
 								}
 							},
 							"inputs": [
 								{
 									"referenceName": "df_web_source",
 									"type": "DatasetReference"
-								}
-							],
-							"outputs": [
-								{
-									"referenceName": "ds_web_sink",
-									"type": "DatasetReference",
-									"parameters": {
-										"file_name": "Drives"
-									}
 								}
 							]
 						},
