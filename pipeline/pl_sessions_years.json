@@ -169,7 +169,7 @@
 							]
 						},
 						{
-							"name": "Set variable1",
+							"name": "set_variables_for",
 							"type": "SetVariable",
 							"dependsOn": [
 								{
