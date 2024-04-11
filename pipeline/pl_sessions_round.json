@@ -277,11 +277,8 @@
 							],
 							"outputs": [
 								{
-									"referenceName": "ds_web_sink",
-									"type": "DatasetReference",
-									"parameters": {
-										"file_name": "Drives"
-									}
+									"referenceName": "ds_session_round",
+									"type": "DatasetReference"
 								}
 							]
 						}
