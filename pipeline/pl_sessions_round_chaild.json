@@ -138,19 +138,6 @@
 								"enableStaging": false,
 								"translator": {
 									"type": "TabularTranslator",
-									"mappings": [
-										{
-											"source": {
-												"name": "col_1",
-												"type": "String"
-											},
-											"sink": {
-												"type": "String",
-												"physicalType": "String",
-												"ordinal": 1
-											}
-										}
-									],
 									"typeConversion": true,
 									"typeConversionSettings": {
 										"allowDataTruncation": true,
@@ -167,7 +154,17 @@
 							"outputs": [
 								{
 									"referenceName": "ds_sink_round_wise_data",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"file_name_year": {
+											"value": "@pipeline().parameters.take_yera_from_parents",
+											"type": "Expression"
+										},
+										"file_name_round": {
+											"value": "@item().round",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
