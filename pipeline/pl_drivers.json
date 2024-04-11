@@ -20,8 +20,8 @@
 				}
 			},
 			{
-				"name": "act_driver",
-				"type": "ForEach",
+				"name": "Set variable1",
+				"type": "SetVariable",
 				"dependsOn": [
 					{
 						"activity": "Web1",
@@ -30,6 +30,10 @@
 						]
 					}
 				],
+				"policy": {
+					"secureOutput": false,
+					"secureInput": false
+				},
 				"userProperties": []
 			}
 		],
