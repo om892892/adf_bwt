@@ -14,7 +14,7 @@
 					"value": "@concat('schedule_',item().season,'.json')",
 					"type": "Expression"
 				},
-				"folderPath": "output",
+				"folderPath": "output_drivers",
 				"container": "bwtsession"
 			},
 			"columnDelimiter": ",",
