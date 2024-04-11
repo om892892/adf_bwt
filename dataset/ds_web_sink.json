@@ -10,10 +10,6 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": {
-					"value": "@concat('schedule_',item().Drivers,'.json')",
-					"type": "Expression"
-				},
 				"folderPath": "output_drivers",
 				"container": "bwtsession"
 			},
