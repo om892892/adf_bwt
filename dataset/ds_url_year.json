@@ -1,0 +1,23 @@
+{
+	"name": "ds_url_year",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azure_stg",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"folderPath": "session",
+				"container": "formula-output"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "",
+			"firstRowAsHeader": true,
+			"quoteChar": ""
+		},
+		"schema": []
+	}
+}
