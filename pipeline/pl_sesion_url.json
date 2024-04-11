@@ -68,7 +68,10 @@
 						"additionalColumns": [
 							{
 								"name": "col1",
-								"value": "$$FILEPATH"
+								"value": {
+									"value": "@variables('yearwise_url')",
+									"type": "Expression"
+								}
 							}
 						],
 						"storeSettings": {
