@@ -193,7 +193,7 @@
 							}
 						},
 						{
-							"name": "Execute Pipeline1",
+							"name": "act_Execute_child_Pipeline1",
 							"type": "ExecutePipeline",
 							"dependsOn": [
 								{
