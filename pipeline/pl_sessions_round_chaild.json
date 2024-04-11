@@ -36,7 +36,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('act_web').output.MRData.SeasonTable.Seasons",
+						"value": "@activity('act_web').output.MRData.RaceTable.races",
 						"type": "Expression"
 					},
 					"activities": [
