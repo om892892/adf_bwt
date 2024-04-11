@@ -37,8 +37,57 @@
 				"userProperties": [],
 				"typeProperties": {
 					"variableName": "yearwise_url",
-					"value": ""
+					"value": {
+						"value": "@activity('web_url').output",
+						"type": "Expression"
+					}
 				}
+			},
+			{
+				"name": "copy_years",
+				"type": "Copy",
+				"dependsOn": [
+					{
+						"activity": "set_variable_for_url",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"policy": {
+					"timeout": "0.12:00:00",
+					"retry": 0,
+					"retryIntervalInSeconds": 30,
+					"secureOutput": false,
+					"secureInput": false
+				},
+				"userProperties": [],
+				"typeProperties": {
+					"source": {
+						"type": "DelimitedTextSource",
+						"additionalColumns": [
+							{
+								"name": "col1",
+								"value": "$$FILEPATH"
+							}
+						],
+						"storeSettings": {
+							"type": "AzureBlobStorageReadSettings",
+							"recursive": true,
+							"enablePartitionDiscovery": false
+						},
+						"formatSettings": {
+							"type": "DelimitedTextReadSettings"
+						}
+					},
+					"enableStaging": false
+				},
+				"inputs": [
+					{
+						"referenceName": "df_web_source",
+						"type": "DatasetReference"
+					}
+				]
 			}
 		],
 		"variables": {
