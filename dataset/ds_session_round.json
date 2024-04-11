@@ -5,11 +5,21 @@
 			"referenceName": "ls_azure_stg",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"folder_name": {
+				"type": "String",
+				"defaultValue": "round_output"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"folderPath": {
+					"value": "@dataset().folder_name",
+					"type": "Expression"
+				},
 				"container": "bwtsession"
 			},
 			"columnDelimiter": ",",

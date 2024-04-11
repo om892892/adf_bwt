@@ -181,7 +181,10 @@
 							"userProperties": [],
 							"typeProperties": {
 								"method": "GET",
-								"url": "@concat('http://ergast.com/api/f1/',item().season, '.json')"
+								"url": {
+									"value": "@concat('http://ergast.com/api/f1/',item().season, '.json')",
+									"type": "Expression"
+								}
 							}
 						},
 						{
@@ -291,7 +294,10 @@
 							"outputs": [
 								{
 									"referenceName": "ds_web_sink",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"file_name": "Drives"
+									}
 								}
 							]
 						}
@@ -336,6 +342,9 @@
 				"type": "Array"
 			},
 			"year ": {
+				"type": "String"
+			},
+			"drivers": {
 				"type": "String"
 			}
 		},

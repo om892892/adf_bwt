@@ -164,7 +164,10 @@
 							"outputs": [
 								{
 									"referenceName": "ds_web_sink",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"file_name": "Drives"
+									}
 								}
 							]
 						}
@@ -188,11 +191,17 @@
 					"secureOutput": false,
 					"secureInput": false
 				},
-				"userProperties": []
+				"userProperties": [],
+				"typeProperties": {
+					"variableName": ""
+				}
 			}
 		],
 		"variables": {
 			"year": {
+				"type": "String"
+			},
+			"drivers": {
 				"type": "String"
 			}
 		},
