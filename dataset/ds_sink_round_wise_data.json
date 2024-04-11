@@ -22,7 +22,10 @@
 					"value": "@concat('season_',dataset().file_name_year,'_round_',dataset().file_name_round,'.json')",
 					"type": "Expression"
 				},
-				"folderPath": "results",
+				"folderPath": {
+					"value": "@concat('Results','/',string(utcnow('yyyyMMdd')))",
+					"type": "Expression"
+				},
 				"container": "formula-output"
 			},
 			"columnDelimiter": ",",
