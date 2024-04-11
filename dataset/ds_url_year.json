@@ -5,11 +5,21 @@
 			"referenceName": "ls_azure_stg",
 			"type": "LinkedServiceReference"
 		},
+		"parameters": {
+			"file_name": {
+				"type": "String",
+				"defaultValue": "formula1_sessions"
+			}
+		},
 		"annotations": [],
 		"type": "DelimitedText",
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"fileName": {
+					"value": "@dataset().file_name",
+					"type": "Expression"
+				},
 				"folderPath": "session",
 				"container": "formula-output"
 			},
