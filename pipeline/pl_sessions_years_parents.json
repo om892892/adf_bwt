@@ -193,7 +193,7 @@
 							}
 						},
 						{
-							"name": "act_Execute_child_Pipeline1",
+							"name": "act_Execute_child_Pipeline",
 							"type": "ExecutePipeline",
 							"dependsOn": [
 								{
@@ -208,6 +208,10 @@
 							},
 							"userProperties": [],
 							"typeProperties": {
+								"pipeline": {
+									"referenceName": "pl_sessions_round_chaild",
+									"type": "PipelineReference"
+								},
 								"waitOnCompletion": true
 							}
 						}
