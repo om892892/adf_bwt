@@ -128,7 +128,7 @@
 						"referenceName": "ds_url_year",
 						"type": "DatasetReference",
 						"parameters": {
-							"file_name": "formula1_sessions"
+							"file_name": "formula1_sessions.json"
 						}
 					}
 				]
