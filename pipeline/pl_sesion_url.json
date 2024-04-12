@@ -38,7 +38,7 @@
 				"typeProperties": {
 					"variableName": "yearwise_url",
 					"value": {
-						"value": "@{activity('web_url').output}",
+						"value": "@{activity('web_url').output.MRData.SeasonTable.Seasons}",
 						"type": "Expression"
 					}
 				}
