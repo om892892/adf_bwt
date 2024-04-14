@@ -16,7 +16,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"method": "GET",
-					"url": "http://ergast.com/api/f1/drivers.json?limit=1000"
+					"url": "http://ergast.com/api/f1/drivers.json"
 				}
 			},
 			{
@@ -25,6 +25,12 @@
 				"dependsOn": [
 					{
 						"activity": "Web2",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					},
+					{
+						"activity": "Web1",
 						"dependencyConditions": [
 							"Succeeded"
 						]
