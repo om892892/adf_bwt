@@ -20,7 +20,7 @@
 					"value": "@dataset().file_name",
 					"type": "Expression"
 				},
-				"folderPath": "races",
+				"folderPath": "drives",
 				"container": "formula-output"
 			},
 			"columnDelimiter": ",",
