@@ -5,6 +5,8 @@
 			{
 				"name": "Web1",
 				"type": "WebActivity",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [],
 				"policy": {
 					"timeout": "0.12:00:00",
@@ -142,6 +144,8 @@
 			{
 				"name": "Set variable2",
 				"type": "SetVariable",
+				"state": "Inactive",
+				"onInactiveMarkAs": "Succeeded",
 				"dependsOn": [
 					{
 						"activity": "Web1",
@@ -184,10 +188,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"method": "GET",
-					"url": {
-						"value": "@concat('http://ergast.com/api/f1/drivers.json?limit=',variables('drivers'))",
-						"type": "Expression"
-					}
+					"url": "http://ergast.com/api/f1/drivers.json?limit=1000"
 				}
 			}
 		],
