@@ -48,7 +48,10 @@
 							"userProperties": [],
 							"typeProperties": {
 								"variableName": "round",
-								"value": ""
+								"value": {
+									"value": "@item().season",
+									"type": "Expression"
+								}
 							}
 						},
 						{
@@ -59,7 +62,11 @@
 								"secureOutput": false,
 								"secureInput": false
 							},
-							"userProperties": []
+							"userProperties": [],
+							"typeProperties": {
+								"variableName": "season",
+								"value": ""
+							}
 						}
 					]
 				}
@@ -67,6 +74,9 @@
 		],
 		"variables": {
 			"round": {
+				"type": "String"
+			},
+			"season": {
 				"type": "String"
 			}
 		},
