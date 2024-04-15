@@ -1,8 +1,26 @@
 {
 	"name": "ds_http_pitstop",
 	"properties": {
+		"linkedServiceName": {
+			"referenceName": "HttpServer1",
+			"type": "LinkedServiceReference"
+		},
+		"parameters": {
+			"rl_url": {
+				"type": "string"
+			}
+		},
 		"annotations": [],
 		"type": "Json",
+		"typeProperties": {
+			"location": {
+				"type": "HttpServerLocation",
+				"relativeUrl": {
+					"value": "@dataset().rl_url",
+					"type": "Expression"
+				}
+			}
+		},
 		"schema": {}
 	}
 }
