@@ -43,7 +43,7 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "$['MRData']['xmlns']"
+									"path": "$['MRData']['RaceTable']['Races'][0]['season']"
 								},
 								"sink": {
 									"ordinal": 1
@@ -51,7 +51,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['series']"
+									"path": "$['MRData']['RaceTable']['Races'][0]['round']"
 								},
 								"sink": {
 									"ordinal": 2
@@ -59,7 +59,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['url']"
+									"path": "$['MRData']['RaceTable']['Races'][0]['url']"
 								},
 								"sink": {
 									"ordinal": 3
@@ -67,7 +67,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['limit']"
+									"path": "$['MRData']['RaceTable']['Races'][0]['raceName']"
 								},
 								"sink": {
 									"ordinal": 4
@@ -75,7 +75,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['offset']"
+									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['circuitId']"
 								},
 								"sink": {
 									"ordinal": 5
@@ -83,7 +83,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['total']"
+									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['url']"
 								},
 								"sink": {
 									"ordinal": 6
@@ -91,7 +91,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['season']"
+									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['circuitName']"
 								},
 								"sink": {
 									"ordinal": 7
@@ -99,7 +99,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['round']"
+									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['Location']['lat']"
 								},
 								"sink": {
 									"ordinal": 8
@@ -107,7 +107,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['url']"
+									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['Location']['long']"
 								},
 								"sink": {
 									"ordinal": 9
@@ -115,7 +115,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['raceName']"
+									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['Location']['locality']"
 								},
 								"sink": {
 									"ordinal": 10
@@ -123,7 +123,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['circuitId']"
+									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['Location']['country']"
 								},
 								"sink": {
 									"ordinal": 11
@@ -131,7 +131,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['url']"
+									"path": "$['MRData']['RaceTable']['Races'][0]['date']"
 								},
 								"sink": {
 									"ordinal": 12
@@ -139,58 +139,10 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['circuitName']"
-								},
-								"sink": {
-									"ordinal": 13
-								}
-							},
-							{
-								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['Location']['lat']"
-								},
-								"sink": {
-									"ordinal": 14
-								}
-							},
-							{
-								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['Location']['long']"
-								},
-								"sink": {
-									"ordinal": 15
-								}
-							},
-							{
-								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['Location']['locality']"
-								},
-								"sink": {
-									"ordinal": 16
-								}
-							},
-							{
-								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['Location']['country']"
-								},
-								"sink": {
-									"ordinal": 17
-								}
-							},
-							{
-								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['date']"
-								},
-								"sink": {
-									"ordinal": 18
-								}
-							},
-							{
-								"source": {
 									"path": "$['MRData']['RaceTable']['Races'][0]['time']"
 								},
 								"sink": {
-									"ordinal": 19
+									"ordinal": 13
 								}
 							}
 						],
