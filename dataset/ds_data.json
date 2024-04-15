@@ -1,0 +1,24 @@
+{
+	"name": "ds_data",
+	"properties": {
+		"linkedServiceName": {
+			"referenceName": "ls_azure_stg",
+			"type": "LinkedServiceReference"
+		},
+		"annotations": [],
+		"type": "DelimitedText",
+		"typeProperties": {
+			"location": {
+				"type": "AzureBlobStorageLocation",
+				"fileName": "data.csv",
+				"folderPath": "Data",
+				"container": "bwtsession"
+			},
+			"columnDelimiter": ",",
+			"escapeChar": "\\",
+			"firstRowAsHeader": true,
+			"quoteChar": "\""
+		},
+		"schema": []
+	}
+}
