@@ -18,6 +18,19 @@
 					"method": "GET",
 					"url": "http://ergast.com/api/f1.json?offset=839&limit=300"
 				}
+			},
+			{
+				"name": "get_pitstop",
+				"type": "ForEach",
+				"dependsOn": [
+					{
+						"activity": "Web_pitstop",
+						"dependencyConditions": [
+							"Succeeded"
+						]
+					}
+				],
+				"userProperties": []
 			}
 		],
 		"folder": {
