@@ -66,7 +66,13 @@
 							"inputs": [
 								{
 									"referenceName": "ds_http_pitstop",
-									"type": "DatasetReference"
+									"type": "DatasetReference",
+									"parameters": {
+										"rl_url": {
+											"value": "@concat('/f1/',item()['season'],'/',item()['round'],'/pitstops.json?limit=1200')",
+											"type": "Expression"
+										}
+									}
 								}
 							]
 						}
