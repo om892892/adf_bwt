@@ -10,7 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "HttpServerLocation",
-				"relativeUrl": ".json?offset=839&limit=300"
+				"relativeUrl": "f1.json?offset=839&limit=300"
 			}
 		},
 		"schema": {}
