@@ -7,6 +7,9 @@
 		},
 		"annotations": [],
 		"type": "RestResource",
+		"typeProperties": {
+			"relativeUrl": "f1.json?offset=839&limit=300"
+		},
 		"schema": []
 	}
 }
