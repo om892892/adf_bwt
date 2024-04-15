@@ -135,7 +135,10 @@
 							"userProperties": [],
 							"typeProperties": {
 								"variableName": "round",
-								"value": ""
+								"value": {
+									"value": "@item().round",
+									"type": "Expression"
+								}
 							}
 						}
 					]
