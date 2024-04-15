@@ -1,18 +1,8 @@
 {
 	"name": "ds_http_pitstop",
 	"properties": {
-		"linkedServiceName": {
-			"referenceName": "HttpServer1",
-			"type": "LinkedServiceReference"
-		},
 		"annotations": [],
 		"type": "Json",
-		"typeProperties": {
-			"location": {
-				"type": "HttpServerLocation",
-				"relativeUrl": "f1.json?offset=839&limit=300"
-			}
-		},
 		"schema": {}
 	}
 }
