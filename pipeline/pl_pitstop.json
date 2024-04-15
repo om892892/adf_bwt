@@ -62,6 +62,15 @@
 										"type": "JsonReadSettings"
 									}
 								},
+								"sink": {
+									"type": "JsonSink",
+									"storeSettings": {
+										"type": "AzureBlobStorageWriteSettings"
+									},
+									"formatSettings": {
+										"type": "JsonWriteSettings"
+									}
+								},
 								"enableStaging": false
 							},
 							"inputs": [
@@ -74,6 +83,12 @@
 											"type": "Expression"
 										}
 									}
+								}
+							],
+							"outputs": [
+								{
+									"referenceName": "ds_finsl_pitstop",
+									"type": "DatasetReference"
 								}
 							]
 						}
