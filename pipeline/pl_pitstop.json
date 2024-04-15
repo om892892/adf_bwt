@@ -21,7 +21,7 @@
 						"requestInterval": "00.00:00:00.010",
 						"requestMethod": "GET",
 						"paginationRules": {
-							"QueryParameters.pageoffset": "RANGE:1:1200:30"
+							"QueryParameters.pageoffset": "RANGE:1:1200:300"
 						}
 					},
 					"sink": {
@@ -42,7 +42,7 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "['season']"
+									"path": "$['MRData']['xmlns']"
 								},
 								"sink": {
 									"ordinal": 1
@@ -50,7 +50,7 @@
 							},
 							{
 								"source": {
-									"path": "['round']"
+									"path": "$['MRData']['series']"
 								},
 								"sink": {
 									"ordinal": 2
@@ -58,7 +58,7 @@
 							},
 							{
 								"source": {
-									"path": "['raceName']"
+									"path": "$['MRData']['url']"
 								},
 								"sink": {
 									"ordinal": 3
@@ -66,7 +66,7 @@
 							},
 							{
 								"source": {
-									"path": "['Circuit']['circuitId']"
+									"path": "$['MRData']['limit']"
 								},
 								"sink": {
 									"ordinal": 4
@@ -74,10 +74,114 @@
 							},
 							{
 								"source": {
-									"path": "['Circuit']['circuitName']"
+									"path": "$['MRData']['offset']"
 								},
 								"sink": {
 									"ordinal": 5
+								}
+							},
+							{
+								"source": {
+									"path": "$['MRData']['total']"
+								},
+								"sink": {
+									"ordinal": 6
+								}
+							},
+							{
+								"source": {
+									"path": "['season']"
+								},
+								"sink": {
+									"ordinal": 7
+								}
+							},
+							{
+								"source": {
+									"path": "['round']"
+								},
+								"sink": {
+									"ordinal": 8
+								}
+							},
+							{
+								"source": {
+									"path": "['url']"
+								},
+								"sink": {
+									"ordinal": 9
+								}
+							},
+							{
+								"source": {
+									"path": "['raceName']"
+								},
+								"sink": {
+									"ordinal": 10
+								}
+							},
+							{
+								"source": {
+									"path": "['Circuit']['circuitId']"
+								},
+								"sink": {
+									"ordinal": 11
+								}
+							},
+							{
+								"source": {
+									"path": "['Circuit']['url']"
+								},
+								"sink": {
+									"ordinal": 12
+								}
+							},
+							{
+								"source": {
+									"path": "['Circuit']['circuitName']"
+								},
+								"sink": {
+									"ordinal": 13
+								}
+							},
+							{
+								"source": {
+									"path": "['Circuit']['Location']['lat']"
+								},
+								"sink": {
+									"ordinal": 14
+								}
+							},
+							{
+								"source": {
+									"path": "['Circuit']['Location']['long']"
+								},
+								"sink": {
+									"ordinal": 15
+								}
+							},
+							{
+								"source": {
+									"path": "['Circuit']['Location']['locality']"
+								},
+								"sink": {
+									"ordinal": 16
+								}
+							},
+							{
+								"source": {
+									"path": "['Circuit']['Location']['country']"
+								},
+								"sink": {
+									"ordinal": 17
+								}
+							},
+							{
+								"source": {
+									"path": "['date']"
+								},
+								"sink": {
+									"ordinal": 18
 								}
 							}
 						],
