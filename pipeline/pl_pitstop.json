@@ -94,7 +94,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"rl_url": {
-											"value": "@concat('/f1/',item()['season'],'/',item()['round'],'/pitstops.json?limit=1200')",
+											"value": "@concat(variables('season'),'/',variables('round'),'/pitstops.json')",
 											"type": "Expression"
 										}
 									}
