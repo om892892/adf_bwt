@@ -15,16 +15,6 @@
 				},
 				"userProperties": [],
 				"typeProperties": {
-					"source": {
-						"type": "JsonSource",
-						"storeSettings": {
-							"type": "HttpReadSettings",
-							"requestMethod": "GET"
-						},
-						"formatSettings": {
-							"type": "JsonReadSettings"
-						}
-					},
 					"sink": {
 						"type": "DelimitedTextSink",
 						"storeSettings": {
@@ -145,16 +135,9 @@
 									"ordinal": 13
 								}
 							}
-						],
-						"collectionReference": "$['MRData']['RaceTable']['Races']"
+						]
 					}
 				},
-				"inputs": [
-					{
-						"referenceName": "ds_http_pitstop",
-						"type": "DatasetReference"
-					}
-				],
 				"outputs": [
 					{
 						"referenceName": "ds_pitsop",
