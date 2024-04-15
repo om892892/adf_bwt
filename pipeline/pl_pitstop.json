@@ -62,18 +62,6 @@
 										"type": "JsonReadSettings"
 									}
 								},
-								"sink": {
-									"type": "DelimitedTextSink",
-									"storeSettings": {
-										"type": "AzureBlobStorageWriteSettings",
-										"copyBehavior": "MergeFiles"
-									},
-									"formatSettings": {
-										"type": "DelimitedTextWriteSettings",
-										"quoteAllText": true,
-										"fileExtension": ".txt"
-									}
-								},
 								"enableStaging": false
 							},
 							"inputs": [
@@ -82,16 +70,10 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"rl_url": {
-											"value": "@concat('f1/',variables('season'),'/',variables('round'),'/pitstops.json')",
+											"value": "@concat('f1/',item()['season'],'/',item()['round'],'/pitstops.json?limit=200')",
 											"type": "Expression"
 										}
 									}
-								}
-							],
-							"outputs": [
-								{
-									"referenceName": "ds_pitsop",
-									"type": "DatasetReference"
 								}
 							]
 						}
