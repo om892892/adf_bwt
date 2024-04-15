@@ -21,7 +21,7 @@
 						"requestInterval": "00.00:00:00.010",
 						"requestMethod": "GET",
 						"paginationRules": {
-							"QueryParameters.f1.json?offset=839&limit=300": "RANGE:839:1200:300"
+							"QueryParameters.pageoffset": "RANGE"
 						}
 					},
 					"sink": {
