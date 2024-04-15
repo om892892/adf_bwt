@@ -10,7 +10,8 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
-				"fileName": "Weboutput.json",
+				"fileName": "data.csv",
+				"folderPath": "data",
 				"container": "bwtsession"
 			},
 			"columnDelimiter": ",",
