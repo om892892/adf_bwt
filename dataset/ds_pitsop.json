@@ -10,6 +10,7 @@
 		"typeProperties": {
 			"location": {
 				"type": "AzureBlobStorageLocation",
+				"folderPath": "pit_stops",
 				"container": "formula-output"
 			},
 			"columnDelimiter": ",",
