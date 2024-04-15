@@ -8,11 +8,20 @@
 		"azure_blob_storage_connectionString": {
 			"value": ""
 		},
+		"ls_azure_stg_connectionString": {
+			"value": ""
+		},
 		"ls_blob_backup_connectionString": {
 			"value": ""
 		},
 		"ls_blob_storage_connectionString": {
 			"value": ""
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "http://ergast.com/api/"
+		},
+		"RestService1_properties_typeProperties_url": {
+			"value": "http://ergast.com/api/"
 		},
 		"containerUri": {
 			"value": ""

@@ -11,6 +11,10 @@
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'azure_blob_storage'"
 		},
+		"ls_azure_stg_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_azure_stg'"
+		},
 		"ls_blob_backup_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_blob_backup'"
@@ -18,6 +22,14 @@
 		"ls_blob_storage_connectionString": {
 			"type": "secureString",
 			"metadata": "Secure string for 'connectionString' of 'ls_blob_storage'"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "http://ergast.com/api/"
+		},
+		"RestService1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "http://ergast.com/api/"
 		},
 		"containerUri": {
 			"type": "string",
@@ -49,15 +61,44 @@
 					"azure_blob_storage_connectionString": {
 						"value": "[parameters('azure_blob_storage_connectionString')]"
 					},
+					"ls_azure_stg_connectionString": {
+						"value": "[parameters('ls_azure_stg_connectionString')]"
+					},
 					"ls_blob_backup_connectionString": {
 						"value": "[parameters('ls_blob_backup_connectionString')]"
 					},
 					"ls_blob_storage_connectionString": {
 						"value": "[parameters('ls_blob_storage_connectionString')]"
+					},
+					"HttpServer1_properties_typeProperties_url": {
+						"value": "[parameters('HttpServer1_properties_typeProperties_url')]"
+					},
+					"RestService1_properties_typeProperties_url": {
+						"value": "[parameters('RestService1_properties_typeProperties_url')]"
 					}
 				}
 			},
 			"dependsOn": []
+		},
+		{
+			"name": "bwt-adf-session_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'bwt-adf-session_ArmTemplate_0')]"
+			]
 		}
 	]
 }
