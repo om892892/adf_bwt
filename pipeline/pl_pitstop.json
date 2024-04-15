@@ -21,7 +21,7 @@
 						"requestInterval": "00.00:00:00.010",
 						"requestMethod": "GET",
 						"paginationRules": {
-							"QueryParameters.pageoffset": "RANGE"
+							"QueryParameters.pageoffset": "RANGE:1:1200:30"
 						}
 					},
 					"sink": {
@@ -42,7 +42,7 @@
 						"mappings": [
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['season']"
+									"path": "$['MRData']['xmlns']"
 								},
 								"sink": {
 									"ordinal": 1
@@ -50,7 +50,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['round']"
+									"path": "$['MRData']['series']"
 								},
 								"sink": {
 									"ordinal": 2
@@ -58,7 +58,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['url']"
+									"path": "$['MRData']['url']"
 								},
 								"sink": {
 									"ordinal": 3
@@ -66,7 +66,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['raceName']"
+									"path": "$['MRData']['limit']"
 								},
 								"sink": {
 									"ordinal": 4
@@ -74,7 +74,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['circuitId']"
+									"path": "$['MRData']['offset']"
 								},
 								"sink": {
 									"ordinal": 5
@@ -82,7 +82,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['url']"
+									"path": "$['MRData']['total']"
 								},
 								"sink": {
 									"ordinal": 6
@@ -90,7 +90,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['circuitName']"
+									"path": "['season']"
 								},
 								"sink": {
 									"ordinal": 7
@@ -98,7 +98,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['Location']['lat']"
+									"path": "['round']"
 								},
 								"sink": {
 									"ordinal": 8
@@ -106,7 +106,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['Location']['long']"
+									"path": "['url']"
 								},
 								"sink": {
 									"ordinal": 9
@@ -114,7 +114,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['Location']['locality']"
+									"path": "['raceName']"
 								},
 								"sink": {
 									"ordinal": 10
@@ -122,7 +122,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['Circuit']['Location']['country']"
+									"path": "['Circuit']['circuitId']"
 								},
 								"sink": {
 									"ordinal": 11
@@ -130,7 +130,7 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['date']"
+									"path": "['Circuit']['url']"
 								},
 								"sink": {
 									"ordinal": 12
@@ -138,10 +138,50 @@
 							},
 							{
 								"source": {
-									"path": "$['MRData']['RaceTable']['Races'][0]['time']"
+									"path": "['Circuit']['circuitName']"
 								},
 								"sink": {
 									"ordinal": 13
+								}
+							},
+							{
+								"source": {
+									"path": "['Circuit']['Location']['lat']"
+								},
+								"sink": {
+									"ordinal": 14
+								}
+							},
+							{
+								"source": {
+									"path": "['Circuit']['Location']['long']"
+								},
+								"sink": {
+									"ordinal": 15
+								}
+							},
+							{
+								"source": {
+									"path": "['Circuit']['Location']['locality']"
+								},
+								"sink": {
+									"ordinal": 16
+								}
+							},
+							{
+								"source": {
+									"path": "['Circuit']['Location']['country']"
+								},
+								"sink": {
+									"ordinal": 17
+								}
+							},
+							{
+								"source": {
+									"path": "['date']"
+								},
+								"sink": {
+									"ordinal": 18
 								}
 							}
 						],
