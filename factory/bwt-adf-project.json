@@ -1,0 +1,9 @@
+{
+	"name": "bwt-adf-project",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "3acca224-e580-4651-9a81-61aea4dc8381",
+		"tenantId": "e5067042-8535-4ad3-a346-6b72b6f740be"
+	}
+}
