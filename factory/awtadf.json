@@ -1,0 +1,9 @@
+{
+	"name": "awtadf",
+	"location": "centralindia",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "7959bd06-e3fb-4d5f-9cbb-6d73bb194ba8",
+		"tenantId": "b13e9e74-d199-431d-9bbf-40021c860d11"
+	}
+}
