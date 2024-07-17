@@ -1,0 +1,24 @@
+{
+	"name": "tumbling_tg",
+	"properties": {
+		"annotations": [],
+		"runtimeState": "Started",
+		"pipelines": [
+			{
+				"pipelineReference": {
+					"referenceName": "pl_trigger_tumblintumbling",
+					"type": "PipelineReference"
+				}
+			}
+		],
+		"type": "ScheduleTrigger",
+		"typeProperties": {
+			"recurrence": {
+				"frequency": "Minute",
+				"interval": 5,
+				"startTime": "2024-07-17T17:18:00",
+				"timeZone": "India Standard Time"
+			}
+		}
+	}
+}
