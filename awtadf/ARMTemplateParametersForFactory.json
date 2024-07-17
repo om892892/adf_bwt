@@ -1,0 +1,99 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "awtadf"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"value": ""
+		},
+		"AzureBlobStorage2_connectionString": {
+			"value": ""
+		},
+		"AzureDatabricks1_accessToken": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_password": {
+			"value": ""
+		},
+		"FileServer1_password": {
+			"value": ""
+		},
+		"Oracle1_connectionString": {
+			"value": ""
+		},
+		"azure_blob_storage_connectionString": {
+			"value": ""
+		},
+		"la_adls_covidreportingdl_accountKey": {
+			"value": ""
+		},
+		"linkedService1_connectionString": {
+			"value": ""
+		},
+		"ls_ablob_covidreportings_connectionString": {
+			"value": ""
+		},
+		"ls_adlsgen2_accountKey": {
+			"value": ""
+		},
+		"ls_azure_adls2_accountKey": {
+			"value": ""
+		},
+		"ls_azure_stg_connectionString": {
+			"value": ""
+		},
+		"ls_blob_backup_connectionString": {
+			"value": ""
+		},
+		"ls_blob_storage_connectionString": {
+			"value": ""
+		},
+		"ls_data_accountKey": {
+			"value": ""
+		},
+		"ls_post_sql_connectionString": {
+			"value": ""
+		},
+		"ls_rest_api_accountKey": {
+			"value": ""
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"value": "mission100day"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"value": "bwt_database"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"value": "omkar_hande"
+		},
+		"FileServer1_properties_typeProperties_host": {
+			"value": "E:\\azure_storage"
+		},
+		"FileServer1_properties_typeProperties_userId": {
+			"value": "ayush"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"value": "http://ergast.com/api/"
+		},
+		"RestService1_properties_typeProperties_url": {
+			"value": "http://ergast.com/api/"
+		},
+		"la_adls_covidreportingdl_properties_typeProperties_url": {
+			"value": "https://gen2stgcovid19.dfs.core.windows.net/"
+		},
+		"ls_adlsgen2_properties_typeProperties_url": {
+			"value": "https://brainworksstg.dfs.core.windows.net/"
+		},
+		"ls_azure_adls2_properties_typeProperties_url": {
+			"value": "https://bwadf.dfs.core.windows.net/"
+		},
+		"ls_data_properties_typeProperties_url": {
+			"value": "https://practiceadfbwt.dfs.core.windows.net/"
+		},
+		"ls_rest_api_properties_typeProperties_url": {
+			"value": "https://brainworksstg.dfs.core.windows.net/"
+		}
+	}
+}

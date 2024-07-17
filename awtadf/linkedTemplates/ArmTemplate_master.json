@@ -1,0 +1,292 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "awtadf"
+		},
+		"AzureBlobStorage1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage1'"
+		},
+		"AzureBlobStorage2_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'AzureBlobStorage2'"
+		},
+		"AzureDatabricks1_accessToken": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accessToken' of 'AzureDatabricks1'"
+		},
+		"AzureSqlDatabase1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'AzureSqlDatabase1'"
+		},
+		"FileServer1_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'FileServer1'"
+		},
+		"Oracle1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'Oracle1'"
+		},
+		"azure_blob_storage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'azure_blob_storage'"
+		},
+		"la_adls_covidreportingdl_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'la_adls_covidreportingdl'"
+		},
+		"linkedService1_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'linkedService1'"
+		},
+		"ls_ablob_covidreportings_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_ablob_covidreportings'"
+		},
+		"ls_adlsgen2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_adlsgen2'"
+		},
+		"ls_azure_adls2_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_azure_adls2'"
+		},
+		"ls_azure_stg_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_azure_stg'"
+		},
+		"ls_blob_backup_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_blob_backup'"
+		},
+		"ls_blob_storage_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_blob_storage'"
+		},
+		"ls_data_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_data'"
+		},
+		"ls_post_sql_connectionString": {
+			"type": "secureString",
+			"metadata": "Secure string for 'connectionString' of 'ls_post_sql'"
+		},
+		"ls_rest_api_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'ls_rest_api'"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_server": {
+			"type": "string",
+			"defaultValue": "mission100day"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "bwt_database"
+		},
+		"AzureSqlDatabase1_properties_typeProperties_userName": {
+			"type": "string",
+			"defaultValue": "omkar_hande"
+		},
+		"FileServer1_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "E:\\azure_storage"
+		},
+		"FileServer1_properties_typeProperties_userId": {
+			"type": "string",
+			"defaultValue": "ayush"
+		},
+		"HttpServer1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "http://ergast.com/api/"
+		},
+		"RestService1_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "http://ergast.com/api/"
+		},
+		"la_adls_covidreportingdl_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://gen2stgcovid19.dfs.core.windows.net/"
+		},
+		"ls_adlsgen2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://brainworksstg.dfs.core.windows.net/"
+		},
+		"ls_azure_adls2_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://bwadf.dfs.core.windows.net/"
+		},
+		"ls_data_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://practiceadfbwt.dfs.core.windows.net/"
+		},
+		"ls_rest_api_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://brainworksstg.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "awtadf_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"AzureBlobStorage1_connectionString": {
+						"value": "[parameters('AzureBlobStorage1_connectionString')]"
+					},
+					"AzureBlobStorage2_connectionString": {
+						"value": "[parameters('AzureBlobStorage2_connectionString')]"
+					},
+					"AzureDatabricks1_accessToken": {
+						"value": "[parameters('AzureDatabricks1_accessToken')]"
+					},
+					"AzureSqlDatabase1_password": {
+						"value": "[parameters('AzureSqlDatabase1_password')]"
+					},
+					"azure_blob_storage_connectionString": {
+						"value": "[parameters('azure_blob_storage_connectionString')]"
+					},
+					"la_adls_covidreportingdl_accountKey": {
+						"value": "[parameters('la_adls_covidreportingdl_accountKey')]"
+					},
+					"linkedService1_connectionString": {
+						"value": "[parameters('linkedService1_connectionString')]"
+					},
+					"ls_ablob_covidreportings_connectionString": {
+						"value": "[parameters('ls_ablob_covidreportings_connectionString')]"
+					},
+					"ls_adlsgen2_accountKey": {
+						"value": "[parameters('ls_adlsgen2_accountKey')]"
+					},
+					"ls_azure_adls2_accountKey": {
+						"value": "[parameters('ls_azure_adls2_accountKey')]"
+					},
+					"ls_azure_stg_connectionString": {
+						"value": "[parameters('ls_azure_stg_connectionString')]"
+					},
+					"ls_blob_backup_connectionString": {
+						"value": "[parameters('ls_blob_backup_connectionString')]"
+					},
+					"ls_blob_storage_connectionString": {
+						"value": "[parameters('ls_blob_storage_connectionString')]"
+					},
+					"ls_data_accountKey": {
+						"value": "[parameters('ls_data_accountKey')]"
+					},
+					"ls_post_sql_connectionString": {
+						"value": "[parameters('ls_post_sql_connectionString')]"
+					},
+					"ls_rest_api_accountKey": {
+						"value": "[parameters('ls_rest_api_accountKey')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_server": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_server')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_database": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_database')]"
+					},
+					"AzureSqlDatabase1_properties_typeProperties_userName": {
+						"value": "[parameters('AzureSqlDatabase1_properties_typeProperties_userName')]"
+					},
+					"HttpServer1_properties_typeProperties_url": {
+						"value": "[parameters('HttpServer1_properties_typeProperties_url')]"
+					},
+					"RestService1_properties_typeProperties_url": {
+						"value": "[parameters('RestService1_properties_typeProperties_url')]"
+					},
+					"la_adls_covidreportingdl_properties_typeProperties_url": {
+						"value": "[parameters('la_adls_covidreportingdl_properties_typeProperties_url')]"
+					},
+					"ls_adlsgen2_properties_typeProperties_url": {
+						"value": "[parameters('ls_adlsgen2_properties_typeProperties_url')]"
+					},
+					"ls_azure_adls2_properties_typeProperties_url": {
+						"value": "[parameters('ls_azure_adls2_properties_typeProperties_url')]"
+					},
+					"ls_data_properties_typeProperties_url": {
+						"value": "[parameters('ls_data_properties_typeProperties_url')]"
+					},
+					"ls_rest_api_properties_typeProperties_url": {
+						"value": "[parameters('ls_rest_api_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		},
+		{
+			"name": "awtadf_ArmTemplate_1",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_1.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"FileServer1_password": {
+						"value": "[parameters('FileServer1_password')]"
+					},
+					"Oracle1_connectionString": {
+						"value": "[parameters('Oracle1_connectionString')]"
+					},
+					"FileServer1_properties_typeProperties_host": {
+						"value": "[parameters('FileServer1_properties_typeProperties_host')]"
+					},
+					"FileServer1_properties_typeProperties_userId": {
+						"value": "[parameters('FileServer1_properties_typeProperties_userId')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'awtadf_ArmTemplate_0')]"
+			]
+		},
+		{
+			"name": "awtadf_ArmTemplate_2",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2018-02-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_2.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					}
+				}
+			},
+			"dependsOn": [
+				"[resourceId('Microsoft.Resources/deployments', 'awtadf_ArmTemplate_1')]"
+			]
+		}
+	]
+}
