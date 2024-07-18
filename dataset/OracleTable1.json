@@ -10,7 +10,7 @@
 		"schema": [],
 		"typeProperties": {
 			"schema": "omkar",
-			"table": "DATA"
+			"table": "DATA_TABLE"
 		}
 	}
 }
